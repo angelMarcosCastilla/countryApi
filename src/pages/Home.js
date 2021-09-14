@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <>
       <Main>
-      <ContainerCountry/>
+         <ContainerCountry/>
       </Main>
     </>
   )

@@ -1,12 +1,17 @@
-import { CountryProvider } from "./context/provider/CountryProvider";
-import Home from "./pages/Home";
-
+import RouterApp from "./RouterApp/Router";
+import { createGlobalStyle } from "styled-components";
 function App() {
-
+  const GlobalStyled = createGlobalStyle`
+  body{
+    margin:0;
+    font-family: 'Heebo', sans-serif;
+  }
+  ` 
   return (
-    <CountryProvider>
-      <Home></Home>
-    </CountryProvider>
+    <>
+    <GlobalStyled/>
+    <RouterApp/>
+    </>
   );
 }
 
