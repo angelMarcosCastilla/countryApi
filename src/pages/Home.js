@@ -1,13 +1,15 @@
 import React from 'react'
-import { useCountries } from '../hooks/useCountries'
-
+import ContainerCountry from "../components/ContainerCountry"
+import {} from "../components/ContainerCountry"
+import Main from '../layout/Main'
 const Home = () => {
 
- const countries =  useCountries()
   return (
-    <div>
-      
-    </div>
+    <>
+      <Main>
+      <ContainerCountry/>
+      </Main>
+    </>
   )
 }
 
