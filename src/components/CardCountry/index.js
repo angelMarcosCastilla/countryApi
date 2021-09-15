@@ -1,9 +1,11 @@
 import React from 'react'
 import  {CardCountry, ContainerText, CountryCapital, CountryName, CountryPopulation, CountryRegion, ImgCountry} from "./styled" 
+
 function Index({country}) {
   const {name, flag, population, region, capital} = country
+
   return (
-    <CardCountry >
+    <CardCountry  >
       <ImgCountry src = {flag} alt= "bandera peru"></ImgCountry>
      <ContainerText> 
        <CountryName> {name} </CountryName>

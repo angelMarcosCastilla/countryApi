@@ -4,7 +4,7 @@ export const CardCountry = styled.div`
   width: 100%;
   height: 400px;
   box-shadow  : 5px 0  10px rgb(0,0,0,.3) ;
-  background: white;
+  background: ${({theme}) => theme.color.secondary};
 `
 export const ContainerText = styled.div`
   padding: 0 1.5rem ;
