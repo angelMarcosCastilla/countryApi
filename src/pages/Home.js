@@ -8,9 +8,9 @@ import Main from '../layout/Main'
 const Home = () => {
   const style = {
     "display":"flex",
-    "justify-content": "space-between",
-    "aling-item" : "center",
-    "margin-bottom" : "1.5rem"
+    "justifyContent": "space-between",
+    "alingItems" : "center",
+    "marginBottom" : "1.5rem"
     
   }
   return (

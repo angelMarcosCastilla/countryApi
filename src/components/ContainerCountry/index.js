@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { useCountries } from "../../hooks/useCountries"
 import  CardCountry  from "../CardCountry"
 import { ContainerCountries } from "./styled"
@@ -7,8 +8,8 @@ const Index = () => {
   return (
     <ContainerCountries>
      {
-     filterCountries.map(el => <CardCountry  key = {el.name} country = {el}/>)
-     }
+       filterCountries.map(el => <Link style = {{"textDecoration":"none"}}to = {`/details/${el.name}`} key = {el.name}><CardCountry   country = {el}/> </Link>)
+    }
     </ContainerCountries>
   )
 }

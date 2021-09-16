@@ -6,7 +6,7 @@ import { countryReducer } from "../reducer/countryReducer";
 const initialState = {
   countries : [],
   filterCountries:[],
-  borderCouintries:[]
+  borderCountries:[]
 }
 
 export const CountryContext  = createContext(initialState)
