@@ -6,7 +6,6 @@ import Home from "../pages/Home"
 import { GlobalStyled } from "../components/GlobalStyle";
 import {themes } from "../config/themes"
 import { ThemeProvider } from "styled-components";
-import ThemeAppProvider from "../context/ThemesAppContext";
 import { useState } from "react";
 
 const RouterApp = () => {

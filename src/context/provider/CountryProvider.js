@@ -3,7 +3,11 @@ import getcountries from "../../services/getCountries";
 import { countryActions } from "../actions/countryActions";
 import { countryReducer } from "../reducer/countryReducer";
 
-const initialState = []
+const initialState = {
+  countries : [],
+  filterCountries:[],
+  borderCouintries:[]
+}
 
 export const CountryContext  = createContext(initialState)
 
@@ -13,13 +17,13 @@ export const CountryProvider = ({children}) => {
 
   useEffect(() => {
     getcountries().then(countries => {
-
       dispatch({type:countryActions.LOAD_COUNTRIES, payload : countries })
+      dispatch({type:countryActions.FILTER_COUNTRY, payload : countries })
     })
   }, [])
 
    
-  const data = {state}
+  const data = {state, dispatch}
   return (
     <CountryContext.Provider value = {data}>
       {children}
