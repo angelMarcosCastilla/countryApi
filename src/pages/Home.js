@@ -5,18 +5,15 @@ import Search from "../components/Search"
 import Select from "../components/Select"
 import { Container } from '../layout/Container'
 import Main from '../layout/Main'
+
+import "./home.css"
+
 const Home = () => {
-  const style = {
-    "display":"flex",
-    "justifyContent": "space-between",
-    "alingItems" : "center",
-    "marginBottom" : "1.5rem"
-    
-  }
+ 
   return (
     <>
       <Main>
-          <Container style = {style}> 
+          <Container className = "flex"> 
           <Search/>
           <Select/>
           </Container>

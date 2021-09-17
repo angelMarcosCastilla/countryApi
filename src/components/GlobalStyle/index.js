@@ -7,4 +7,12 @@ import { createGlobalStyle } from "styled-components";
     background-color: ${({theme}) => theme.color.primary};
     color :  ${({theme}) => theme.text.color}
   }
+
+  img {
+    max-width: 100%;
+  }
+
+  a{
+    text-decoration: nones;
+  }
   `
