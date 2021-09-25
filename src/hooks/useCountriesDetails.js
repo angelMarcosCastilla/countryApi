@@ -11,29 +11,27 @@ const useCountriesDetails = () => {
   const [countryDetails, setcountryDetails] = useState({});
 
   useEffect(() => {
-    let details, borderCountries, languages, currencies, topLevelDomain;
+    let details, borderCountries, languages, currencies, nativeName;
 
     if (countries.length !== 0) {
-      details = countries.find((el) => el.name === name);
+      details = countries.find((el) => el.name.common === name);
       borderCountries = details.borders.map(
-        (border) => countries.find((el) => el.alpha3Code === border).name
+        (border) => countries.find((el) => el.cca3 === border).name.common
       );
-      languages = details.languages.map((el) => el.name).join(" , ");
-      currencies = details.currencies.map((el) => el.name).join(" , ");
-      topLevelDomain = details.topLevelDomain[0];
+      languages = Object.values(details.languages).map(el => el).join(" , ")
+      currencies = Object.values(details.currencies)[0].name
+      nativeName = Object.values(details.name.nativeName)[0].common
 
       setcountryDetails({
         borderCountries,
         languages,
         currencies,
-        topLevelDomain,
-        name: details.name,
-        flag: details.flag,
+        name: details.name.common,
+        flag: details.flags[0],
         capital: details.capital,
         region: details.region,
         subregion: details.subregion,
-        nativeName: details.nativeName,
-        population : details.population
+        nativeName
       });
     } else {
       getcountries().then(countries => {

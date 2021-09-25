@@ -19,7 +19,7 @@ export const CountryProvider = ({children}) => {
     getcountries().then(countries => {
       dispatch({type:countryActions.LOAD_COUNTRIES, payload : countries })
       dispatch({type:countryActions.FILTER_COUNTRY, payload : countries })
-    })
+     })
   }, [])
 
    

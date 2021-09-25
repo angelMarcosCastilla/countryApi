@@ -10,8 +10,6 @@ const Details = () => {
     borderCountries,
     languages,
     currencies,
-    topLevelDomain,
-    population,
     name,
     flag,
     capital,
@@ -30,20 +28,18 @@ const Details = () => {
             <div>
               <h2>{name}</h2>
               <p><strong>Native Name: </strong>{nativeName}</p>
-              <p><strong>Population: </strong>{population}</p>
               <p><strong>Region: </strong>{region}</p>
               <p><strong>subRegion: </strong>{subregion}</p>
               <p><strong>Capital: </strong>{capital}</p>
             </div>
             <div>
-              <p><strong>Top Level Domain: </strong>{topLevelDomain}</p>
               <p><strong>currencies: </strong>{currencies}</p>
               <p><strong>Languajes: </strong>{languages}</p>
             </div>
             </Grid>
             <p>Border countries</p>
             { borderCountries &&
-              borderCountries.map( name => <Link to = {`/details/${name}`} key = {name} ><Button>{name}</Button></Link>)
+              borderCountries.map( border => <Link to = {`/details/${border}`} key = {border} ><Button>{border}</Button></Link>)
             }
         </div>
       </Grid>

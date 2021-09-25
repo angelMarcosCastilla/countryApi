@@ -8,7 +8,7 @@ const Index = () => {
   return (
     <ContainerCountries>
      {
-       filterCountries.map(el => <Link style = {{"textDecoration":"none"}}to = {`/details/${el.name}`} key = {el.name}><CardCountry   country = {el}/> </Link>)
+       filterCountries.map(el => <Link style = {{"textDecoration":"none"}}to = {`/details/${el.name.common}`} key = {el.name.common}><CardCountry   country = {el}/> </Link>)
     }
     </ContainerCountries>
   )

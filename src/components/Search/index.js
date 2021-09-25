@@ -23,7 +23,7 @@ const Index = () => {
     dispatch(
       {
         type : countryActions.FILTER_COUNTRY,
-        payload : countries.filter(el => el.name.toLocaleLowerCase().includes(search.toLocaleLowerCase()))
+        payload : countries.filter(el => el.name.common.toLocaleLowerCase().includes(search.toLocaleLowerCase()))
       }
     )
   }, [search, dispatch, countries])
